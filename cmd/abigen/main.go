@@ -1,10 +1,9 @@
-package main
+package abigen
 
 import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
-	"flag"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -19,18 +18,20 @@ const (
 	version = "0.1.0"
 )
 
-func main() {
-	var sources string
-	var pckg string
-	var output string
-	var name string
+func Parse(sources string, pckg string, output string, name string) {
+	/*
+		var sources string
+		var pckg string
+		var output string
+		var name string
 
-	flag.StringVar(&sources, "source", "", "List of abi files")
-	flag.StringVar(&pckg, "package", "main", "Name of the package")
-	flag.StringVar(&output, "output", "", "Output directory")
-	flag.StringVar(&name, "name", "", "name of the contract")
+		flag.StringVar(&sources, "source", "", "List of abi files")
+		flag.StringVar(&pckg, "package", "main", "Name of the package")
+		flag.StringVar(&output, "output", "", "Output directory")
+		flag.StringVar(&name, "name", "", "name of the contract")
 
-	flag.Parse()
+		flag.Parse()
+	*/
 
 	config := &config{
 		Package: pckg,
