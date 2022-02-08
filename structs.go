@@ -136,6 +136,7 @@ type Block struct {
 	Transactions       []*Transaction
 	TransactionsHashes []Hash
 	Uncles             []Hash
+	BaseFeePerGas      uint64
 }
 
 type TransactionType int

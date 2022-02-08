@@ -61,6 +61,7 @@ func (b *Block) UnmarshalJSON(buf []byte) error {
 	if b.ExtraData, err = decodeBytes(b.ExtraData[:0], v, "extraData"); err != nil {
 		return err
 	}
+	b.BaseFeePerGas, _ = decodeUint(v, "baseFeePerGas")
 
 	b.TransactionsHashes = b.TransactionsHashes[:0]
 	b.Transactions = b.Transactions[:0]
